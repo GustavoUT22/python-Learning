@@ -4,13 +4,16 @@ class Perro:
 
     @property
     def nombre(self):
+        print("pasando por el getter")
         return self.__nombre
 
     @nombre.setter
     def nombre(self, nombre):
+        print("pasando por setter")
         if nombre.strip():
-            self.nombre = nombre
+            self.__nombre = nombre
         return
 
 
 perro = Perro("choclo")
+print(perro.nombre)
